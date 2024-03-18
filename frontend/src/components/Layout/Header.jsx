@@ -16,6 +16,7 @@ import { useSelector } from "react-redux";
 import Cart from "../cart/Cart";
 import Wishlist from "../Wishlist/Wishlist";
 import { RxCross1 } from "react-icons/rx";
+import logoImage from '../img/logo.png';
 
 const Header = ({ activeHeading }) => {
   const { isAuthenticated, user } = useSelector((state) => state.user);
@@ -57,10 +58,12 @@ const Header = ({ activeHeading }) => {
         <div className="hidden 800px:h-[50px] 800px:my-[20px] 800px:flex items-center justify-between">
           <div>
             <Link to="/">
-              <img
-                src="https://shopo.quomodothemes.website/assets/images/logo.svg"
-                alt=""
-              />
+            <img
+  src={logoImage}
+  alt=""
+  style={{ width: '370px', height: '60px' }}
+/>
+
             </Link>
           </div>
           {/* search box */}
@@ -97,14 +100,16 @@ const Header = ({ activeHeading }) => {
             ) : null}
           </div>
 
-          <div className={`${styles.button}`}>
-            <Link to={`${isSeller ? "/dashboard" : "/shop-create"}`}>
-              <h1 className="text-[#fff] flex items-center">
-                {isSeller ? "Go Dashboard" : "Become Seller"}{" "}
-                <IoIosArrowForward className="ml-1" />
-              </h1>
-            </Link>
-          </div>
+          {isSeller && (
+  <div className={`${styles.button}`}>
+    <Link to="/dashboard">
+      <h1 className="text-[#fff] flex items-center">
+        Go Dashboard <IoIosArrowForward className="ml-1" />
+      </h1>
+    </Link>
+  </div>
+)}
+
         </div>
       </div>
       <div
@@ -217,8 +222,9 @@ const Header = ({ activeHeading }) => {
           <div>
             <Link to="/">
               <img
-                src="https://shopo.quomodothemes.website/assets/images/logo.svg"
+                src={logoImage}
                 alt=""
+                style={{ width: '370px', height: '60px' }}
                 className="mt-3 cursor-pointer"
               />
             </Link>
@@ -298,13 +304,7 @@ const Header = ({ activeHeading }) => {
               </div>
 
               <Navbar active={activeHeading} />
-              <div className={`${styles.button} ml-4 !rounded-[4px]`}>
-                <Link to="/shop-create">
-                  <h1 className="text-[#fff] flex items-center">
-                    Become Seller <IoIosArrowForward className="ml-1" />
-                  </h1>
-                </Link>
-              </div>
+              
               <br />
               <br />
               <br />
