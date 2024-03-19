@@ -25,22 +25,22 @@ const AllEvents = () => {
   }
 
   const columns = [
-    { field: "id", headerName: "Product Id", minWidth: 150, flex: 0.7 },
+    { field: "id", headerName: "معرف المنتج", minWidth: 150, flex: 0.7 },
     {
       field: "name",
-      headerName: "Name",
+      headerName: "اسم",
       minWidth: 180,
       flex: 1.4,
     },
     {
       field: "price",
-      headerName: "Price",
+      headerName: "سعر",
       minWidth: 100,
       flex: 0.6,
     },
     {
       field: "Stock",
-      headerName: "Stock",
+      headerName: "مخزون",
       type: "number",
       minWidth: 80,
       flex: 0.5,
@@ -48,7 +48,7 @@ const AllEvents = () => {
 
     {
       field: "sold",
-      headerName: "Sold out",
+      headerName: "نفذ",
       type: "number",
       minWidth: 130,
       flex: 0.6,
@@ -102,7 +102,7 @@ const AllEvents = () => {
       row.push({
         id: item._id,
         name: item.name,
-        price: "US$ " + item.discountPrice,
+        price: "NIS " + item.discountPrice,
         Stock: item.stock,
         sold: item.sold_out,
       });

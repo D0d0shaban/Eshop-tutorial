@@ -39,14 +39,14 @@ const ProductDetailsCard = ({ setOpen, data }) => {
   const addToCartHandler = (id) => {
     const isItemExists = cart && cart.find((i) => i._id === id);
     if (isItemExists) {
-      toast.error("Item already in cart!");
+      toast.error("البند بالفعل في عربة!");
     } else {
       if (data.stock < count) {
-        toast.error("Product stock limited!");
+        toast.error("منتج المنتج المحدود!");
       } else {
         const cartData = { ...data, qty: count };
         dispatch(addTocart(cartData));
-        toast.success("Item added to cart successfully!");
+        toast.success("البند أضيفت إلى عربة بنجاح!");
       }
     }
   };
@@ -148,14 +148,14 @@ const ProductDetailsCard = ({ setOpen, data }) => {
                         className="cursor-pointer"
                         onClick={() => removeFromWishlistHandler(data)}
                         color={click ? "red" : "#333"}
-                        title="Remove from wishlist"
+                        title="إزالة من قائمة الأمنيات"
                       />
                     ) : (
                       <AiOutlineHeart
                         size={30}
                         className="cursor-pointer"
                         onClick={() => addToWishlistHandler(data)}
-                        title="Add to wishlist"
+                        title="أضف إلى قائمة الامنيات"
                       />
                     )}
                   </div>

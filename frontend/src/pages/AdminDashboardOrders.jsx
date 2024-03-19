@@ -17,11 +17,11 @@ const AdminDashboardOrders = () => {
   }, []);
 
   const columns = [
-    { field: "id", headerName: "Order ID", minWidth: 150, flex: 0.7 },
+    { field: "id", headerName: "رقم التعريف الخاص بالطلب", minWidth: 150, flex: 0.7 },
 
     {
       field: "status",
-      headerName: "Status",
+      headerName: "حالة",
       minWidth: 130,
       flex: 0.7,
       cellClassName: (params) => {
@@ -32,7 +32,7 @@ const AdminDashboardOrders = () => {
     },
     {
       field: "itemsQty",
-      headerName: "Items Qty",
+      headerName: "العناصر الكمية",
       type: "number",
       minWidth: 130,
       flex: 0.7,
@@ -40,14 +40,14 @@ const AdminDashboardOrders = () => {
 
     {
       field: "total",
-      headerName: "Total",
+      headerName: "المجموع",
       type: "number",
       minWidth: 130,
       flex: 0.8,
     },
     {
         field: "createdAt",
-        headerName: "Order Date",
+        headerName: "تاريخ الطلب",
         type: "number",
         minWidth: 130,
         flex: 0.8,

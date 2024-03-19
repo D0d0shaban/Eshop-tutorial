@@ -13,14 +13,14 @@ const EventCard = ({ active, data }) => {
   const addToCartHandler = (data) => {
     const isItemExists = cart && cart.find((i) => i._id === data._id);
     if (isItemExists) {
-      toast.error("Item already in cart!");
+      toast.error("البند بالفعل في عربة!");
     } else {
       if (data.stock < 1) {
-        toast.error("Product stock limited!");
+        toast.error("منتج المنتج المحدود!");
       } else {
         const cartData = { ...data, qty: 1 };
         dispatch(addTocart(cartData));
-        toast.success("Item added to cart successfully!");
+        toast.success("البند أضيفت إلى عربة بنجاح!");
       }
     }
   }
@@ -46,16 +46,16 @@ const EventCard = ({ active, data }) => {
             </h5>
           </div>
           <span className="pr-3 font-[400] text-[17px] text-[#44a55e]">
-            {data.sold_out} sold
+            {data.sold_out} مُباع
           </span>
         </div>
         <CountDown data={data} />
         <br />
         <div className="flex items-center">
           <Link to={`/product/${data._id}?isEvent=true`}>
-            <div className={`${styles.button} text-[#fff]`}>See Details</div>
+            <div className={`${styles.button} text-[#fff]`}>انظر التفاصيل</div>
           </Link>
-          <div className={`${styles.button} text-[#fff] ml-5`} onClick={() => addToCartHandler(data)}>Add to cart</div>
+          <div className={`${styles.button} text-[#fff] ml-5`} onClick={() => addToCartHandler(data)}>أضف إلى السلة</div>
         </div>
       </div>
     </div>

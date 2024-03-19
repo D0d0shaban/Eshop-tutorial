@@ -104,7 +104,7 @@ const Header = ({ activeHeading }) => {
   <div className={`${styles.button}`}>
     <Link to="/dashboard">
       <h1 className="text-[#fff] flex items-center">
-        Go Dashboard <IoIosArrowForward className="ml-1" />
+        اذهب إلى القيادة <IoIosArrowForward className="ml-1" />
       </h1>
     </Link>
   </div>
@@ -127,7 +127,7 @@ const Header = ({ activeHeading }) => {
               <button
                 className={`h-[100%] w-full flex justify-between items-center pl-10 bg-white font-sans text-lg font-[500] select-none rounded-t-md`}
               >
-                All Categories
+                جميع الفئات
               </button>
               <IoIosArrowDown
                 size={20}
@@ -326,13 +326,13 @@ const Header = ({ activeHeading }) => {
                       to="/login"
                       className="text-[18px] pr-[10px] text-[#000000b7]"
                     >
-                      Login /
+                      تسجيل الدخول /
                     </Link>
                     <Link
                       to="/sign-up"
                       className="text-[18px] text-[#000000b7]"
                     >
-                      Sign up
+                      اشتراك
                     </Link>
                   </>
                 )}

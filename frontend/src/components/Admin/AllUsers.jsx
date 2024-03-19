@@ -32,24 +32,24 @@ const AllUsers = () => {
   };
 
   const columns = [
-    { field: "id", headerName: "User ID", minWidth: 150, flex: 0.7 },
+    { field: "id", headerName: "معرف المستخدم", minWidth: 150, flex: 0.7 },
 
     {
       field: "name",
-      headerName: "name",
+      headerName: "اسم",
       minWidth: 130,
       flex: 0.7,
     },
     {
       field: "email",
-      headerName: "Email",
+      headerName: "بريد إلكتروني",
       type: "text",
       minWidth: 130,
       flex: 0.7,
     },
     {
       field: "role",
-      headerName: "User Role",
+      headerName: "دور المستخدم",
       type: "text",
       minWidth: 130,
       flex: 0.7,
@@ -57,7 +57,7 @@ const AllUsers = () => {
 
     {
       field: "joinedAt",
-      headerName: "joinedAt",
+      headerName: "انضم",
       type: "text",
       minWidth: 130,
       flex: 0.8,
@@ -67,7 +67,7 @@ const AllUsers = () => {
       field: " ",
       flex: 1,
       minWidth: 150,
-      headerName: "Delete User",
+      headerName: "مسح المستخدم",
       type: "number",
       sortable: false,
       renderCell: (params) => {
@@ -114,20 +114,20 @@ const AllUsers = () => {
                 <RxCross1 size={25} onClick={() => setOpen(false)} />
               </div>
               <h3 className="text-[25px] text-center py-5 font-Poppins text-[#000000cb]">
-                Are you sure you wanna delete this user?
+                هل أنت متأكد أنك تريد حذف هذا المستخدم؟
               </h3>
               <div className="w-full flex items-center justify-center">
                 <div
                   className={`${styles.button} text-white text-[18px] !h-[42px] mr-4`}
                   onClick={() => setOpen(false)}
                 >
-                  cancel
+                  يلغي
                 </div>
                 <div
                   className={`${styles.button} text-white text-[18px] !h-[42px] ml-4`}
                   onClick={() =>  setOpen(false) || handleDelete(userId)}
                 >
-                  confirm
+                  متأكد
                 </div>
               </div>
             </div>

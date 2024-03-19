@@ -52,7 +52,7 @@ const CreateEvent = () => {
       toast.error(error);
     }
     if (success) {
-      toast.success("Event created successfully!");
+      toast.success("تم إنشاء الحدث بنجاح!");
       navigate("/dashboard-events");
       window.location.reload();
     }
@@ -101,7 +101,7 @@ const CreateEvent = () => {
 
   return (
     <div className="w-[90%] 800px:w-[50%] bg-white  shadow h-[80vh] rounded-[4px] p-3 overflow-y-scroll">
-      <h5 className="text-[30px] font-Poppins text-center">Create Event</h5>
+      <h5 className="text-[30px] font-Poppins text-center">انشاء حدث</h5>
       {/* create event form */}
       <form onSubmit={handleSubmit}>
         <br />
@@ -115,13 +115,13 @@ const CreateEvent = () => {
             value={name}
             className="mt-2 appearance-none block w-full px-3 h-[35px] border border-gray-300 rounded-[3px] placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
             onChange={(e) => setName(e.target.value)}
-            placeholder="Enter your event product name..."
+            placeholder="أدخل اسم منتج الحدث الخاص بك ..."
           />
         </div>
         <br />
         <div>
           <label className="pb-2">
-            Description <span className="text-red-500">*</span>
+            وصف <span className="text-red-500">*</span>
           </label>
           <textarea
             cols="30"
@@ -132,20 +132,20 @@ const CreateEvent = () => {
             value={description}
             className="mt-2 appearance-none block w-full pt-2 px-3 border border-gray-300 rounded-[3px] placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
             onChange={(e) => setDescription(e.target.value)}
-            placeholder="Enter your event product description..."
+            placeholder="أدخل وصف منتج الحدث الخاص بك ..."
           ></textarea>
         </div>
         <br />
         <div>
           <label className="pb-2">
-            Category <span className="text-red-500">*</span>
+            فئة <span className="text-red-500">*</span>
           </label>
           <select
             className="w-full mt-2 border h-[35px] rounded-[5px]"
             value={category}
             onChange={(e) => setCategory(e.target.value)}
           >
-            <option value="Choose a category">Choose a category</option>
+            <option value="Choose a category">اختر فئة</option>
             {categoriesData &&
               categoriesData.map((i) => (
                 <option value={i.title} key={i.title}>
@@ -156,32 +156,32 @@ const CreateEvent = () => {
         </div>
         <br />
         <div>
-          <label className="pb-2">Tags</label>
+          <label className="pb-2">العلامات</label>
           <input
             type="text"
             name="tags"
             value={tags}
             className="mt-2 appearance-none block w-full px-3 h-[35px] border border-gray-300 rounded-[3px] placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
             onChange={(e) => setTags(e.target.value)}
-            placeholder="Enter your event product tags..."
+            placeholder="أدخل علامات منتج الحدث الخاص بك ..."
           />
         </div>
         <br />
         <div>
-          <label className="pb-2">Original Price</label>
+          <label className="pb-2">السعر الأصلي</label>
           <input
             type="number"
             name="price"
             value={originalPrice}
             className="mt-2 appearance-none block w-full px-3 h-[35px] border border-gray-300 rounded-[3px] placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
             onChange={(e) => setOriginalPrice(e.target.value)}
-            placeholder="Enter your event product price..."
+            placeholder="أدخل سعر منتج الحدث الخاص بك ..."
           />
         </div>
         <br />
         <div>
           <label className="pb-2">
-            Price (With Discount) <span className="text-red-500">*</span>
+            السعر (بخصم) <span className="text-red-500">*</span>
           </label>
           <input
             type="number"
@@ -189,13 +189,13 @@ const CreateEvent = () => {
             value={discountPrice}
             className="mt-2 appearance-none block w-full px-3 h-[35px] border border-gray-300 rounded-[3px] placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
             onChange={(e) => setDiscountPrice(e.target.value)}
-            placeholder="Enter your event product price with discount..."
+            placeholder="أدخل سعر منتج الحدث الخاص بك مع خصم ..."
           />
         </div>
         <br />
         <div>
           <label className="pb-2">
-            Product Stock <span className="text-red-500">*</span>
+            مخزون المنتج <span className="text-red-500">*</span>
           </label>
           <input
             type="number"
@@ -203,13 +203,13 @@ const CreateEvent = () => {
             value={stock}
             className="mt-2 appearance-none block w-full px-3 h-[35px] border border-gray-300 rounded-[3px] placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
             onChange={(e) => setStock(e.target.value)}
-            placeholder="Enter your event product stock..."
+            placeholder="أدخل مخزون منتج الحدث الخاص بك ..."
           />
         </div>
         <br />
         <div>
           <label className="pb-2">
-            Event Start Date <span className="text-red-500">*</span>
+            تاريخ بدء الحدث <span className="text-red-500">*</span>
           </label>
           <input
             type="date"
@@ -219,13 +219,13 @@ const CreateEvent = () => {
             className="mt-2 appearance-none block w-full px-3 h-[35px] border border-gray-300 rounded-[3px] placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
             onChange={handleStartDateChange}
             min={today}
-            placeholder="Enter your event product stock..."
+            placeholder="أدخل مخزون منتج الحدث الخاص بك ..."
           />
         </div>
         <br />
         <div>
           <label className="pb-2">
-            Event End Date <span className="text-red-500">*</span>
+            تاريخ نهاية الحدث <span className="text-red-500">*</span>
           </label>
           <input
             type="date"
@@ -235,13 +235,13 @@ const CreateEvent = () => {
             className="mt-2 appearance-none block w-full px-3 h-[35px] border border-gray-300 rounded-[3px] placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
             onChange={handleEndDateChange}
             min={minEndDate}
-            placeholder="Enter your event product stock..."
+            placeholder="أدخل مخزون منتج الحدث الخاص بك ..."
           />
         </div>
         <br />
         <div>
           <label className="pb-2">
-            Upload Images <span className="text-red-500">*</span>
+            تحميل الصور <span className="text-red-500">*</span>
           </label>
           <input
             type="file"

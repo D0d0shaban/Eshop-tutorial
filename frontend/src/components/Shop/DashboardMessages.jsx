@@ -210,7 +210,7 @@ const DashboardMessages = () => {
       {!open && (
         <>
           <h1 className="text-center text-[30px] py-3 font-Poppins">
-            All Messages
+            جميع الرسائل
           </h1>
           {/* All messages list */}
           {conversations &&

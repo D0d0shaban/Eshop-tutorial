@@ -48,14 +48,14 @@ const ProductCard = ({ data,isEvent }) => {
   const addToCartHandler = (id) => {
     const isItemExists = cart && cart.find((i) => i._id === id);
     if (isItemExists) {
-      toast.error("Item already in cart!");
+      toast.error("البند بالفعل في عربة!");
     } else {
       if (data.stock < 1) {
-        toast.error("Product stock limited!");
+        toast.error("منتج المنتج المحدود!");
       } else {
         const cartData = { ...data, qty: 1 };
         dispatch(addTocart(cartData));
-        toast.success("Item added to cart successfully!");
+        toast.success("البند أضيفت إلى عربة بنجاح!");
       }
     }
   };
@@ -96,7 +96,7 @@ const ProductCard = ({ data,isEvent }) => {
               </h4>
             </div>
             <span className="font-[400] text-[17px] text-[#68d284]">
-              {data?.sold_out} sold
+              {data?.sold_out} مُباع
             </span>
           </div>
         </Link>
@@ -109,7 +109,7 @@ const ProductCard = ({ data,isEvent }) => {
               className="cursor-pointer absolute right-2 top-5"
               onClick={() => removeFromWishlistHandler(data)}
               color={click ? "red" : "#333"}
-              title="Remove from wishlist"
+              title="إزالة من قائمة الأمنيات"
             />
           ) : (
             <AiOutlineHeart
@@ -117,7 +117,7 @@ const ProductCard = ({ data,isEvent }) => {
               className="cursor-pointer absolute right-2 top-5"
               onClick={() => addToWishlistHandler(data)}
               color={click ? "red" : "#333"}
-              title="Add to wishlist"
+              title="أضف إلى قائمة الامنيات"
             />
           )}
           <AiOutlineEye
@@ -125,14 +125,14 @@ const ProductCard = ({ data,isEvent }) => {
             className="cursor-pointer absolute right-2 top-14"
             onClick={() => setOpen(!open)}
             color="#333"
-            title="Quick view"
+            title="نظرة سريعة"
           />
           <AiOutlineShoppingCart
             size={25}
             className="cursor-pointer absolute right-2 top-24"
             onClick={() => addToCartHandler(data._id)}
             color="#444"
-            title="Add to cart"
+            title="أضف إلى السلة"
           />
           {open ? <ProductDetailsCard setOpen={setOpen} data={data} /> : null}
         </div>

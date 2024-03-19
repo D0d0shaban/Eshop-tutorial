@@ -32,24 +32,24 @@ const AllSellers = () => {
   };
 
   const columns = [
-    { field: "id", headerName: "Seller ID", minWidth: 150, flex: 0.7 },
+    { field: "id", headerName: "معرف البائع", minWidth: 150, flex: 0.7 },
 
     {
       field: "name",
-      headerName: "name",
+      headerName: "اسم",
       minWidth: 130,
       flex: 0.7,
     },
     {
       field: "email",
-      headerName: "Email",
+      headerName: "بريد إلكتروني",
       type: "text",
       minWidth: 130,
       flex: 0.7,
     },
     {
       field: "address",
-      headerName: "Seller Address",
+      headerName: "عنوان البائع",
       type: "text",
       minWidth: 130,
       flex: 0.7,
@@ -57,7 +57,7 @@ const AllSellers = () => {
 
     {
       field: "joinedAt",
-      headerName: "joinedAt",
+      headerName: "انضم",
       type: "text",
       minWidth: 130,
       flex: 0.8,
@@ -66,7 +66,7 @@ const AllSellers = () => {
         field: "  ",
         flex: 1,
         minWidth: 150,
-        headerName: "Preview Shop",
+        headerName: "معاينة متجر",
         type: "number",
         sortable: false,
         renderCell: (params) => {
@@ -85,7 +85,7 @@ const AllSellers = () => {
       field: " ",
       flex: 1,
       minWidth: 150,
-      headerName: "Delete Seller",
+      headerName: "حذف البائع",
       type: "number",
       sortable: false,
       renderCell: (params) => {
@@ -115,7 +115,7 @@ const AllSellers = () => {
   return (
     <div className="w-full flex justify-center pt-5">
       <div className="w-[97%]">
-        <h3 className="text-[22px] font-Poppins pb-2">All Users</h3>
+        <h3 className="text-[22px] font-Poppins pb-2">جميع المستخدمين</h3>
         <div className="w-full min-h-[45vh] bg-white rounded">
           <DataGrid
             rows={row}
@@ -132,20 +132,20 @@ const AllSellers = () => {
                 <RxCross1 size={25} onClick={() => setOpen(false)} />
               </div>
               <h3 className="text-[25px] text-center py-5 font-Poppins text-[#000000cb]">
-                Are you sure you wanna delete this user?
+                هل أنت متأكد أنك تريد حذف هذا المستخدم؟
               </h3>
               <div className="w-full flex items-center justify-center">
                 <div
                   className={`${styles.button} text-white text-[18px] !h-[42px] mr-4`}
                   onClick={() => setOpen(false)}
                 >
-                  cancel
+                  يلغي
                 </div>
                 <div
                   className={`${styles.button} text-white text-[18px] !h-[42px] ml-4`}
                   onClick={() =>  setOpen(false) || handleDelete(userId)}
                 >
-                  confirm
+                  متأكد
                 </div>
               </div>
             </div>

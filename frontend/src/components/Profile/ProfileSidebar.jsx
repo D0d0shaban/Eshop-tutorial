@@ -42,7 +42,7 @@ const ProfileSidebar = ({ setActive, active }) => {
             active === 1 ? "text-[red]" : ""
           } 800px:block hidden`}
         >
-          Profile
+          حساب تعريفي
         </span>
       </div>
       <div
@@ -55,7 +55,7 @@ const ProfileSidebar = ({ setActive, active }) => {
             active === 2 ? "text-[red]" : ""
           } 800px:block hidden`}
         >
-          Orders
+          طلبات
         </span>
       </div>
       <div
@@ -68,7 +68,7 @@ const ProfileSidebar = ({ setActive, active }) => {
             active === 3 ? "text-[red]" : ""
           } 800px:block hidden`}
         >
-          Refunds
+          المبالغ المستردة
         </span>
       </div>
 
@@ -96,7 +96,7 @@ const ProfileSidebar = ({ setActive, active }) => {
             active === 5 ? "text-[red]" : ""
           } 800px:block hidden`}
         >
-          Track Order
+          ترتيب المسار
         </span>
       </div>
 
@@ -110,7 +110,7 @@ const ProfileSidebar = ({ setActive, active }) => {
             active === 6 ? "text-[red]" : ""
           } 800px:block hidden`}
         >
-          Change Password
+          تغيير كلمة المرور
         </span>
       </div>
 
@@ -124,7 +124,7 @@ const ProfileSidebar = ({ setActive, active }) => {
             active === 7 ? "text-[red]" : ""
           } 800px:block hidden`}
         >
-          Address
+          عنوان
         </span>
       </div>
 
@@ -143,7 +143,7 @@ const ProfileSidebar = ({ setActive, active }) => {
                 active === 8 ? "text-[red]" : ""
               } 800px:block hidden`}
             >
-              Admin Dashboard
+              لوحة معلومات المشرف
             </span>
           </div>
         </Link>
@@ -158,7 +158,7 @@ const ProfileSidebar = ({ setActive, active }) => {
             active === 8 ? "text-[red]" : ""
           } 800px:block hidden`}
         >
-          Log out
+          تسجيل خروج
         </span>
       </div>
     </div>
